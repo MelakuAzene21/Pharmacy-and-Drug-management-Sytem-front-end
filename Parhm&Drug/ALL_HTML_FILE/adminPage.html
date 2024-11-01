@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/CSS_FILE/nav2.css">
+    <title>
+        Admin Dashboard
+    </title>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <h2 style="font-family:Arial; color:white; text-align:center;"> PHARMACIA </h2>
+        <a href="adminPage.html">Dashboard</a>
+        <button class="dropdown-btn">Inventory
+            <i class="down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="inventory-add.html">Add New Medicine</a>
+            <a href="inventory-view.html">Manage Inventory</a>
+        </div>
+        <button class="dropdown-btn">Suppliers
+            <i class="down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="supplier-add.html">Add New Supplier</a>
+            <a href="supplier-view.html">Manage Suppliers</a>
+        </div>
+        <button class="dropdown-btn">Stock Purchase
+            <i class="down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="purchase-add.html">Add New Purchase</a>
+            <a href="purchase-view.html">Manage Purchases</a>
+        </div>
+        <button class="dropdown-btn">Employees
+            <i class="down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="employee-add.html">Add New Employee</a>
+            <a href="employee-view.html">Manage Employees</a>
+        </div>
+        <button class="dropdown-btn">Customers
+            <i class="down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="customer-add.html">Add New Customer</a>
+            <a href="customer-view.html">Manage Customers</a>
+        </div>
+        <a href="sales-view.html">View Sales Invoice Details</a>
+        <a href="salesitems-view.html">View Sold Products Details</a>
+        <a href="pos1.html">Add New Sale</a>
+        <button class="dropdown-btn">Reports
+            <i class="down"></i>
+        </button>
+        <div class="dropdown-container" id="reports">
+            <a href="stockreport.html">Low Stock</a>
+            <a href="expiryreport.html"> Soon to Expire</a>
+            <a href="salesreport.html">Transactions Reports</a>
+        </div>
+    </div>
+
+    <div class="topnav">
+        <a href="logout.html">Logout(Logged in as Admin)</a>
+    </div>
+
+    <center>
+        <div class="head">
+            <h2> ADMIN DASHBOARD </h2>
+        </div>
+    </center>
+<div class="dash">
+    <div>
+        <a href="pos1.html" title="Add New Sale">
+            <img src="/images/carticon1.png"
+              width="100" height="100"
+                alt="Add New Sale">
+                        <p>Add New Sales</p>
+
+        </a>
+    </div>
+
+    <div>
+        <a href="inventory-view.html" title="View Inventory">
+            <img src="/images/inventory.png"
+            width="100" height="100"
+                alt="Inventory">
+                        <p>View Inventory</p>
+
+        </a>
+    </div>
+
+    <div>
+        <a href="employee-view.html" title="View Employees">
+            <img src="/images/emp.png"
+            width="100" height="100"
+                alt="Employees List">
+                <p>View Employee</p>
+        </a>
+        
+    </div>
+    
+    <div>
+        <a href="salesreport.html" title="View Transactions">
+            <img src="/images/moneyicon.png"
+            width="100" height="100"
+                alt="Transactions List">
+                <p>View Transactions</p>
+        </a>
+       
+    </div>
+
+   <div>
+    <a href="stockreport.html" title="Low Stock Alert">
+        <img src="/images/alert.png"
+        width="100" height="100"
+            alt="Low Stock Report">
+            <p> Low Stock ALERT</p>
+    </a>
+    
+   </div>
+</div>
+
+</body>
+
+<script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</html>

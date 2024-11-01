@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/CSS_FILE/nav2.css">
+    <link rel="stylesheet" type="text/css" href="/CSS_FILE/form3.css">
+    <link rel="stylesheet" type="text/css" href="/CSS_FILE/table2.css">
+    <title>
+        New Sales
+    </title>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <h2 style="font-family:Arial; color:white; text-align:center;"> PHARMACIA </h2>
+        <a href="pharmmainpage.html">Dashboard</a>
+
+        <a href="pharm-inventory.html">View Inventory</a>
+        <a href="pharm-pos1.html">Add New Sale</a>
+        <button class="dropdown-btn">Customers
+            <i class="down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="pharm-customer.html">Add New Customer</a>
+            <a href="pharm-customer-view.html">View Customers</a>
+        </div>
+    </div>
+
+    
+
+    <div class="topnav">
+        <a href="logout1.php">Logout(signed in as
+           
+        </a>
+    </div>
+
+    <center>
+        <div class="head">
+            <h2> SALES INVOICE</h2>
+        </div>
+    </center>
+
+    <table align='right' id='table1'>
+        <tr>
+            <th>Medicine ID</th>
+            <th>Medicine Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total Price</th>
+            <th>Action</th>
+        </tr>
+
+        
+		
+			
+					<a name='delete' class='button1 del-btn' href="pharm-pos-delete.html">Delete</a>";	
+					</td>
+				</tr>
+				
+			</table>
+			
+
+        <div class="one" style="background-color:white;">
+            <form method=post>
+                <a name='pos1' class='button1 view-btn' href="pharm-pos1.html">Go Back to Sales Page</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type='submit' name='custadd' value='Complete Order'><br>
+            </form>
+        </div>
+
+      
+
+</body>
+
+<script>
+
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+
+</script>
+
+</html>

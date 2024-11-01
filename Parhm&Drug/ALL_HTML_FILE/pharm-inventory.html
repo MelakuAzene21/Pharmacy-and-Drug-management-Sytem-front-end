@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/CSS_FILE/table1.css">
+    <link rel="stylesheet" type="text/css" href="/CSS_FILE/nav2.css">
+    <link rel="stylesheet" type="text/css" href="/CSS_FILE/form2.css">
+    <title>
+        Inventory
+    </title>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <h2 style="font-family:Arial; color:white; text-align:center;"> PHARMACIA </h2>
+        <a href="pharmmainpage.html">Dashboard</a>
+        <a href="pharm-inventory.html">View Inventory</a>
+        <a href="pharm-pos1.html">Add New Sale</a>
+        <button class="dropdown-btn">Customers
+            <i class="down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="pharm-customer.html">Add New Customer</a>
+            <a href="pharm-customer-view.html">View Customers</a>
+        </div>
+    </div>
+
+
+
+    <div class="topnav">
+        <a href="logout1.php">Logout(signed in as)
+        </a>
+    </div>
+
+
+    <center>
+
+        <div class="head">
+            <h2> MEDICINE INVENTORY </h2>
+        </div>
+
+        <form method="post">
+            <input type="text" name="valuetosearch" placeholder="Enter any value to Search"
+                style="width:400px; margin-left:250px;">&nbsp;&nbsp;&nbsp;
+            <input type="submit" name="search" value="Search">
+            <br><br>
+        </form>
+
+    </center>
+
+
+    <table align="right" id="table1" style="margin-top:20px; margin-right:100px;">
+        <tr>
+            <th>Medicine ID</th>
+            <th>Medicine Name</th>
+            <th>Quantity Available</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Location in Store</th>
+        </tr>
+        </table>
+
+        
+</body>
+
+<script>
+
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+
+</script>
+
+</html>

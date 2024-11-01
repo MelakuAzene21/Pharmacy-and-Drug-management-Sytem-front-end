@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/CSS_FILE/nav2.css">
+    <link rel="stylesheet" type="text/css" href="/CSS_FILE/form3.css">
+    <link rel="stylesheet" type="text/css" href="/CSS_FILE/table2.css">
+    <title>
+        New Sales
+    </title>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <h2 style="font-family:Arial; color:white; text-align:center;"> PHARMACIA </h2>
+        <a href="pharmmainpage.html">Dashboard</a>
+
+        <a href="pharm-inventory.html">View Inventory</a>
+        <a href="pharm-pos1.html">Add New Sale</a>
+        <button class="dropdown-btn">Customers
+            <i class="down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="pharm-customer.html">Add New Customer</a>
+            <a href="pharm-customer-view.html">View Customers</a>
+        </div>
+    </div>
+
+  
+
+    <div class="topnav">
+        <a href="logout1.html">Logout(signed in as)
+        </a>
+    </div>
+
+    <center>
+        <div class="head">
+            <h2> POINT OF SALE</h2>
+        </div>
+    </center>
+
+
+    <form action="" method="post">
+        <center>
+
+            <select id="cid" name="cid">
+                <option value="0" selected="selected">*Select Customer ID (only once for a customer's sales)</option>
+                <option value="1">Customer ID1</option>
+                <option value="1">Customer ID2</option>
+                <option value="1">Customer ID3</option>
+                <option value="1">Customer ID4</option>
+                
+                
+
+            </select>
+            &nbsp;&nbsp;
+            <input type="submit" name="custadd" value="Add to Proceed.">
+    </form>
+
+   
+
+    <form method="post">
+        <select id="med" name="med">
+            <option value="0" selected="selected">Select Medicine</option>
+            <option value="1">Medicine 1</option>
+             <option value="2">Medicine 2</option>
+             <option value="3">Medicine 3</option>
+             <option value="4">Medicine 4</option>
+
+        </select>
+        &nbsp;&nbsp;
+        <input type="submit" name="search" value="Search">
+    </form>
+
+    <br><br><br>
+    </center>
+
+
+    
+    <div class="one row" style="margin-right:100px;">
+        <form method="post">
+            <div class="column">
+
+                <label for="medid">Medicine ID:</label>
+                <input type="number" name="medid"  readonly><br><br>
+
+                <label for="mdname">Medicine Name:</label>
+                <input type="text" name="mdname" readonly><br><br>
+
+            </div>
+            <div class="column">
+
+                <label for="mcat">Category:</label>
+                <input type="text" name="mcat" readonly><br><br>
+
+                <label for="mloc">Location:</label>
+                <input type="text" name="mloc"  readonly><br><br>
+
+            </div>
+            <div class="column">
+
+                <label for="mqty">Quantity Available:</label>
+                <input type="number" name="mqty"  readonly><br><br>
+
+                <label for="mprice">Price of One Unit:</label>
+                <input type="number" name="mprice" " readonly><br><br>
+
+            </div>
+            <label for="mcqty">Quantity Required:</label>
+            <input type="number" name="mcqty">
+            &nbsp;&nbsp;&nbsp;<br>
+            <input type="submit" name="add" value="Add Medicine">&nbsp;&nbsp;&nbsp;
+
+           
+				<a class='button1 view-btn' href="pharm-pos2.html">View Order</a>
+				
+
+        </form>
+    </div>
+
+</body>
+
+<script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }		
+</script>
+
+</html>

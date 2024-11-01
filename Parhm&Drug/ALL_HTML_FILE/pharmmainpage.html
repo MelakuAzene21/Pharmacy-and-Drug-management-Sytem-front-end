@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/CSS_FILE/table1.css">
+    <link rel="stylesheet" type="text/css" href="/CSS_FILE/nav2.css">
+    <title>
+        Pharmacist Dashboard
+    </title>
+</head>
+<style>
+    body {
+        font-family: Arial;
+    }
+</style>
+
+<body>
+
+    <div class="sidenav">
+        <h2 style="font-family:Arial; color:white; text-align:center;"> PHARMACIA </h2>
+        <a href="pharmmainpage.html">Dashboard</a>
+
+        <a href="pharm-inventory.html">View Inventory</a>
+        <a href="pharm-pos1.html">Add New Sale</a>
+        <button class="dropdown-btn">Customers
+            <i class="down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="pharm-customer.html">Add New Customer</a>
+            <a href="pharm-customer-view.html">View Customers</a>
+        </div>
+    </div>
+
+    
+
+    <div class="topnav">
+        <a href="logout1.html">Logout(signed in as)
+            
+        </a>
+    </div>
+
+    <center>
+        <div class="head">
+            <h2> PHARMACIST DASHBOARD </h2>
+        </div>
+    </center>
+<div class="dash1">
+    <div >
+        <a href="pharm-pos1.html" title="Add New Sale">
+            <img src="/images/carticon1.png" 
+                alt="Add New Sale">
+         <p>Add New Drug Sell</p>
+        </a>
+    </div>
+
+   <div>
+    <a href="pharm-inventory.html" title="View Inventory">
+        <img src="/images/inventory.png"
+            alt="Inventory">
+      <p>Show Drug Inventory</p>
+    </a>
+   </div>
+</div>
+</body>
+
+<script>
+
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            }
+            else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+
+</script>
+
+</html>
